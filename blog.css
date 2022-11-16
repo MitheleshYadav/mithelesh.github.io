@@ -1,0 +1,112 @@
+#blog_content {
+    /* margin-left: 25vh; */
+    height: fit-content;
+    background-color: #212529;
+    display: flex;
+    flex-direction: column;
+}
+
+#flex_in_grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 70px;
+}
+
+#blog_content h1 {
+    color: white;
+    font-weight: bolder;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 158px;
+}
+
+#b_container_grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 1200px;
+    margin: 10px 10px 10px 200px;
+}
+
+.b_cont {
+    width: 570px;
+    background-color: #343a40;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.b_cont img {
+    height: 450px;
+    width: 450px;
+    align-self: center;
+}
+
+.b_cont h3 {
+    font-size: 25px;
+    color: rgba(255, 255, 255, .5);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.b_cont a {
+    font-size: 25px;
+    color: rgba(255, 255, 255, .5);
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+}
+
+.b_cont h3 :hover {
+    color: rgb(216 241 184 / 81%);
+}
+
+@media only screen and (max-width:1468px) {
+    #b_container_grid {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        margin: 0px;
+    }
+
+    #blog_content {
+        align-items: center;
+        margin-left: 0px;
+        font-size: 60px;
+        padding-top: 40px;
+    }
+
+    .b_cont {
+        width: auto;
+        background-color: #343a40;
+        margin: 15px 15px 15px 15px;
+        padding: 15px 0px 15px 0px;
+        border-radius: 10px;
+    }
+
+    .b_cont h3 {
+        text-align: center;
+    }
+
+    .b_cont a {
+        font-size: 20px;
+    }
+
+    #blog_content h1 {
+        margin-left: 0px;
+        margin-left: 0px;
+        font-size: 60px;
+        padding-top: 30px;
+    }
+
+    #flex_in_grid {
+        width: auto;
+    }
+
+    .b_cont img {
+        width: 100%;
+        height: auto;
+    }
+}

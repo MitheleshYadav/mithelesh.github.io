@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>mitheleshyadav.com</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="/about.css">
+    <link rel="stylesheet" href="/services.css">
+    <link rel="stylesheet" href="/contact.css">
+    <link rel="stylesheet" href="/blog.css">
+    <style>
+        #body {
+            margin: 0px;
+        }
+
+        #responsive_nav {
+            display: none;
+        }
+
+        #navigation {
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 25vh;
+            background-color: #111418;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #navigation img {
+            width: 20vh;
+            border-radius: 110px;
+            margin-top: 10px;
+        }
+
+        #response ul {
+            list-style: none;
+            margin-top: 20vh;
+            margin-left: -6vh;
+        }
+
+        #response ul li a {
+            text-decoration: none;
+            color: seashell;
+        }
+
+        #response ul li {
+            font-size: 1.5rem;
+            font-family: 'Quicksand', sans-serif;
+            margin: 10px 0px 10px 0px;
+            text-align: center;
+        }
+
+        #response ul li a:hover {
+            color: rgb(216 241 184 / 81%);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #navbar {
+            background-color: #212529;
+            height: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        #nav_name a {
+            display: block;
+            padding: 10px 0px 0px 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        #navbar a h3 {
+            display: block;
+            padding: 10px 0px 0px 10px;
+            color: white;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 20px;
+            font-weight: 100;
+            text-decoration: none;
+        }
+
+        .ticon {
+            font-size: 40px;
+            position: absolute;
+            right: 5%;
+            cursor: pointer;
+            right: 10px;
+            color: white
+        }
+
+        .menu {
+            width: 90%;
+            height: 100vh;
+            background-color: #212529;
+            position: fixed;
+            top: 0px;
+            right: -90%;
+            transition: 0.5s;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        .menu hr {
+            color: white;
+        }
+
+        .menu ul li a {
+            display: block;
+
+            color: white;
+            text-decoration: none;
+            padding: 17px 0px 17px 0px;
+            font-size: 17px;
+            font-weight: lighter;
+        }
+
+        .close {
+            font-size: 40px;
+            color: white;
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        #logo_n {
+            padding-top: 50px;
+            color: white;
+        }
+
+        .smenu {
+            right: 0%;
+        }
+
+        @media screen and (max-width:1468px) and (min-width:10px) {
+            #navigation {
+                display: none;
+            }
+
+            #responsive_nav {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<!-- we are basically dividing the screen in two grid. one grid is small and work as navabr and other one will work as content -->
+
+<body id="body">
+    <div id="navigation">
+        <div>
+            <img src="/logo.jpg">
+        </div>
+        <div id="response">
+            <ul>
+                <li><a href="#home_content">Home</a></li>
+                <li><a href="#about_content">About</a></li>
+                <li><a href="#service_content">Services</a></li>
+                <li><a href="#blog_content">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="responsive_nav">
+        <div id="navbar">
+            <div id="nav_name">
+                <a href="#home_content">
+                    <h3>Mithelesh Yadav</h3>
+                </a>
+            </div>
+            <div><span class="ticon" onclick="shownav()">&#9776;</span>
+                <div class="menu">
+                    <span class="close" onclick="closenav()">&times;</span>
+                    <br><br>
+                    <ul>
+                        <li><a href="#home_content" onclick="closenav()">Home</a></li>
+                        <hr>
+                        <li><a href="#about_content" onclick="closenav()">About</a></li>
+                        <hr>
+                        <li><a href="#service_content" onclick="closenav()">Services</a></li>
+                        <hr>
+                        <li><a href="#blog_content" onclick="closenav()">Blog</a></li>
+                        <hr>
+                        <li><a href="#contact" onclick="closenav()">Contact</a></li>
+                        <hr>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-----------------------------------------------HOME CONTENT------------------------------------------------------------------------->
+    <div id="home_content">
+        <p class="one">Welcome</p>
+        <p class="two">I'm <span class="auto-input"></span></p>
+        <p class="one">based in New delhi, India</p>
+        <a href="#contact"><button>Hire Me</button></a>
+    </div>
+    <!-----------------------------------------------ABOUT CONTENT------------------------------------------------------------------------->
+    <div id="about_content">
+        <h1>About Me</h1>
+        <div id="ab_flex">
+            <!-- <div>
+                <img src="/me1.jpg">
+            </div> -->
+            <div id="ab_main">
+                <p style="color: rgb(216 241 184 / 81%);">Who am i?</p>
+                <p>I am <span style="color: #d8f1b8cf ;">Mithelesh Yadav</span> </p>
+                <p>I'm a New Delhi based web designer & front-end developer focused on crafting clean &
+                    user-friendly
+                    experiences, I am passionate about building excellent software that improves the lives of those
+                    around me. I am a freelancer and i have been building noteworthy UX/UI designs and websites
+                    for years, which comply with the latest design trends. Having a sharp eye for product evolution
+                    helps me prioritize tasks, iterate fast and deliver faster.
+                </p>
+            </div>
+            <div id="ab_side">
+                <p>Name : Mithelesh Yadav</p>
+                <hr>
+                <p>Email : mithelesh@gmail.com</p>
+                <hr>
+                <p>Age : 21</p>
+                <hr>
+                <p>From : New Delhi</p>
+                <hr>
+                <button>Download CV</button>
+            </div>
+
+        </div>
+
+    </div>
+    <!-----------------------------------------------SERVICE CONTENT------------------------------------------------------------------------->
+    <div id="service_content">
+        <h1>What I Do?</h1>
+        <div id="sc_main">
+            <div class="s_m_flex">
+                <img
+                    src="https://img.icons8.com/external-phatplus-lineal-phatplus/64/000000/external-advisor-corporation-phatplus-lineal-phatplus.png" />
+                <div class="s_m_inner">
+                    <h5>Social media marketing</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, modi?</p>
+                </div>
+            </div>
+            <div class="s_m_flex">
+                <img src="https://img.icons8.com/ios/50/000000/design--v1.png" />
+                <div class="s_m_inner">
+                    <h5>UX/UI Design</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, modi?</p>
+                </div>
+            </div>
+            <div class="s_m_flex">
+                <img src="https://img.icons8.com/pastel-glyph/64/000000/development--v2.png" />
+                <div class="s_m_inner">
+                    <h5>Web Development</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, modi?</p>
+                </div>
+            </div>
+            <div class="s_m_flex">
+                <img
+                    src="https://img.icons8.com/external-outline-satawat-anukul/64/000000/external-designthinking-design-thinking-outline-outline-satawat-anukul-20.png" />
+                <div class="s_m_inner">
+                    <h5>Graphic Design</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, modi?</p>
+                </div>
+            </div>
+            <div class="s_m_flex">
+                <img src="https://img.icons8.com/ios/50/000000/photo-editor.png" />
+                <div class="s_m_inner">
+                    <h5>Video Editing</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, modi?</p>
+                </div>
+            </div>
+            <div class="s_m_flex">
+                <img src="https://img.icons8.com/material/48/000000/search-more--v1.png" />
+                <div class="s_m_inner">
+                    <h5>SEO marketing</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, modi?</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-----------------------------------------------BLOG CONTENT------------------------------------------------------------------------->
+    <div id="blog_content">
+        <div id="flex_in_grid">
+            <h1>My Blog</h1>
+            <div id="b_container_grid">
+                <div class="b_cont">
+                    <img src="/b1.jpg">
+                    <h3><a href="/blog1.html" target="_blank ">Want to Take Productive Notes? Here Are the 4 Simple
+                            Steps I Use To Learn Better, Make Better Decision, And Create Meaningful Content</a>
+                    </h3>
+                </div>
+                <div class="b_cont">
+                    <img src="/b2.jpg">
+                    <h3><a href="/blog2.html" target="_blank ">Zuckerberg and Pichai's Messages Are a Bad Sign for
+                            the Developers</a></h3>
+
+                </div>
+                <div class="b_cont">
+                    <img src="/b3.png">
+                    <h3><a href="/blog3.html" target="_blank">6 Ways to Stay Focused While Working on Your Startup
+                            and Having a 9 to 5</a></h3>
+
+                </div>
+                <div class="b_cont">
+                    <img src="/b4.png">
+                    <h3><a href="/blog4.html" target="_blank">3 New API's In React 18 Every Developer Should
+                            Know</a></h3>
+
+                </div>
+                <div class="b_cont">
+                    <img src="/b5.png">
+                    <h3><a href="/blog5.html" target="_blank">Risks Definitions and Measurement: An exercise of
+                            Power and Judgment</a></h3>
+
+                </div>
+                <div class="b_cont">
+                    <img src="/b6.png">
+                    <h3><a href="/blog6.html" target="_blank">Performance vs. People </a></h3>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-----------------------------------------------CONTACT CONTENT------------------------------------------------------------------------->
+    <div id="contact">
+        <h1>Get In Touch</h1>
+        <div id="c_main">
+            <div id="c_main1">
+                <h3>ADDRESS</h3>
+                <p>4th Floor, Plot No.22,<br>
+                    145 Murphy Canyon Rd.<br>
+                    San Diego CA 2028</p>
+                <p><img src="https://img.icons8.com/carbon-copy/100/000000/phone.png" />+91 9911051915</p>
+                <p><img
+                        src="https://img.icons8.com/external-those-icons-lineal-those-icons/96/000000/external-phone-mobile-telephone-those-icons-lineal-those-icons-2.png" />+91
+                    8448678089</p>
+                <p> <img src="https://img.icons8.com/material-outlined/96/000000/mail.png" />mithelesh942@gmail.com
+                </p>
+            </div>
+            <div id="c_main2">
+                <h3>SEND US NOTE</h3>
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <input id="name" class="Name" type="text" placeholder="Name"><br>
+                    <input id="mail" class="Email" type="text" placeholder="Mail"><br>
+                    <textarea id="text" class="i3 Message" type="text"
+                        placeholder="Tell me more about your need"></textarea>
+                    <button type="submit" id="s_button" onclick="sendMsg()">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+
+</body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript">
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("mail").value;
+    let message = document.getElementById("text").value;
+    function sendEmail() {
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "mithelesh942@gmail.com",
+            Password: "5ACE6E6B3A860759037D3FB5C3FF7DCE67E7",
+            To: 'mithelesh942@gmail.com',
+            From: "mithelesh942@gmail.com",
+            Subject: "mail from website",
+            Body: "Name: " + document.getElementById("name").value + "<br> Email: " + document.getElementById("mail").value + "<br>Message: " + document.getElementById("text").value
+        }).then(
+            message => alert("Message sent succesfully")
+        );
+
+
+        // let name = document.querySelector(".Name").value;
+        // let email = document.querySelector(".Email").value;
+        // let message = document.querySelector(".Message").value;
+
+        // Email.send({
+        //     Host: "smtp.gmail.com",
+        //     Username: "mithelesh942@gmail.com",
+        //     Password: "geesrjbdsbufsfso",
+        //     To: "mithelesh942@gmail.com",
+        //     From: "mithelesh942@gmail.com",
+        //     Subject: "new  mail from website",
+        //     Body: `Name: ${name} <br/> Email: ${email} <br/> message: ${message}`,
+        // }).then(
+        //     message => {
+        //         if (message == 'OK') {
+        //             alert('Your mail has been send. Thank you for connecting. please refresh the page');
+        //         }
+        //         else {
+        //             console.error("There is error at sending message.");
+        //             alert('There is error at sending message. ')
+        //         }
+        //     }
+        // );
+    }
+</script>
+<script>
+    function shownav() {
+        var m = document.querySelector('.menu');
+        m.classList.add('smenu');
+    }
+    function closenav() {
+        var m = document.querySelector('.menu');
+        m.classList.remove('smenu');
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    let typed = new Typed(".auto-input", {
+        strings: ["Mithelesh Yadav", "Web Developer.", "Freelancer.", "Blogger."],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    })
+</script>
+
+</html>

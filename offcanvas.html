@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .ticon{
+                font-size: 40px;
+                position: absolute;
+                right: 5%;
+                cursor: pointer;
+                right: 10px;
+            }
+            .menu{
+                width: 50%;
+                height: 100vh;
+                background-color: black;
+                position: fixed;
+                top:  0px;
+                right: -50%;
+                transition: 1s;
+                font-size: 1.5rem;
+                font-family: 'Quicksand', sans-serif;
+            }
+            .menu  ul{
+                list-style-type: none;
+            }
+            .menu  hr{
+                color: white;
+            }
+            .menu ul li a{
+                display: block;
+                padding: 10px;
+                color: white;
+                text-decoration: none;
+            }
+            .close{
+                font-size: 40px;
+                color: white;
+                position: absolute;
+                right: 10px;
+                cursor: pointer;
+            }
+            .smenu{
+                right: 0%;
+            }
+        </style>
+        <span class="ticon" onclick="shownav()">&#9776;</span>
+        <div class="menu">
+            <span class="close" onclick="closenav()">&times;</span>
+            <br><br>
+            <ul>
+                <li><a href="#home_content">Home</a></li>
+                <hr>
+                <li><a href="#about_content">About</a></li>
+                <hr>
+                <li><a href="#service_content">Services</a></li>
+                <hr>
+                <li><a href="#blog_content">Blog</a></li>
+                <hr>
+                <li><a href="#contact">Contact</a></li>
+                <hr>
+            </ul>
+        </div>
+    </head>
+    <script>
+        function shownav() {
+            var m = document.querySelector('.menu');
+            m.classList.add('smenu');
+        }
+        function closenav() {
+            var m = document.querySelector('.menu');
+            m.classList.remove('smenu');
+        }
+    </script>
+</html>
